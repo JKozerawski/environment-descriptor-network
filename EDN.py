@@ -11,6 +11,10 @@ from torch import nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 
+"""
+Available city names: "austin", "miami", "pittsburgh", "dearborn", "washington-dc", "palo-alto"
+"""
+
 def parse_arguments():
     """Arguments for running the baseline.
 
@@ -41,7 +45,7 @@ def parse_arguments():
     parser.add_argument("--gpu",
                         type=int,
                         default=-1,
-                        help="GPU to use")
+                        help="id of GPU to use")
     parser.add_argument("--get_embeddings",
                         action="store_true",
                         help="Use the model to save embeddings")
